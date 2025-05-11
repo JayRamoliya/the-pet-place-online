@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,8 +26,10 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#9b87f5',
+					foreground: '#ffffff',
+					light: '#b3a4f7',
+					dark: '#7e69ab'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,6 +64,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				pet: {
+					blue: "#D3E4FD",
+					peach: "#FDE1D3",
+					green: "#F2FCE2",
+					yellow: "#FEF7CD",
+					purple: "#E5DEFF",
+					pink: "#FFDEE2"
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-slow': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-slow': 'bounce-slow 3s ease-in-out infinite'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Fredoka', 'sans-serif']
 			}
 		}
 	},
